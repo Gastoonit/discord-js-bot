@@ -3,7 +3,7 @@ const { readdirSync } = require("fs");
 const client = new Discord.Client({
     intents: 32767,
 });
-const token = process.env['token']
+const token = ""; // Token de tu bot.
 
 client.on('ready', () => {
    console.log(`¡Estoy listo!`);
