@@ -1,7 +1,12 @@
-const { Client, Collection } = require("discord.js");
+const { Client, Collection, GatewayIntentBits } = require("discord.js");
 const { readdirSync } = require("node:fs");
-const client = new Discord.Client({
-    intents: 32767,
+const client = new Client({
+    intents: [
+		GatewayIntentBits.Guilds,
+        GatewayIntentBits.GuildMembers,
+        GatewayIntentBits.GuildMessages,
+        GatewayIntentBits.MessageContent
+	],
 });
 const config = require('./json/config.json');
 
