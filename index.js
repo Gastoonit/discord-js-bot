@@ -8,7 +8,7 @@ const client = new Client({
         GatewayIntentBits.MessageContent
 	],
 });
-const config = require('./json/config.json');
+const config = require(`${process.cwd()}/json/config.json`);
 
 client.commands = new Collection()
 // Commands Message
