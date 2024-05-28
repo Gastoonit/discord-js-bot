@@ -21,7 +21,7 @@ for (const subFolder of readdirSync(`${__dirname}/commands/`)) {
 
 // Events
 for (const subFolder of readdirSync(`${__dirname}/commands/`)) {
-    for (const fileName of readdirSync(`${__dirname}/events/${subFloder}/`)) {
+    for (const fileName of readdirSync(`${__dirname}/events/${subFolder}/`)) {
         let file = require(`${__dirname}/events/${subFolder}/${fileName}`);
         let eventEmiter = file.emiter;
        client[eventEmiter](file.name, file.run.bind(null, client));
