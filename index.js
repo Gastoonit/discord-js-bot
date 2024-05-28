@@ -20,7 +20,7 @@ for (const subFolder of readdirSync(`${__dirname}/commands/`)) {
 };
 
 // Events
-for (const subFolder of readdirSync(`${__dirname}/commands/`)) {
+for (const subFolder of readdirSync(`${__dirname}/events/`)) {
     for (const fileName of readdirSync(`${__dirname}/events/${subFolder}/`)) {
         let file = require(`${__dirname}/events/${subFolder}/${fileName}`);
         let eventEmiter = file.emiter;
